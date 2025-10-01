@@ -29,6 +29,8 @@ COPY . .
 # Create the Conda environment using the project's exact environment.yml file.
 # This is the single source of truth and the most critical step from install.sh.
 # Conda will handle the installation of Python, ffmpeg, and the correct CUDA-enabled PyTorch.
+RUN conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main
+RUN conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
 RUN conda env create -f environment.yml
 
 # Expose port 5000, as specified in run.sh and the README
