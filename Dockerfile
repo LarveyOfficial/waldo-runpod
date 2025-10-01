@@ -1,7 +1,6 @@
 # Dockerfile
 
-FROM nvidia/cuda:12.1.1-runtime-ubuntu22.04
-
+FROM nvidia/cuda:12.1.1-devel-ubuntu22.04
 # Set the working directory to /app
 WORKDIR /app
 
