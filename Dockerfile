@@ -31,6 +31,7 @@ ENV PATH /opt/conda/bin:$PATH
 COPY . .
 
 # Create the Conda environment using the project's exact environment.yml file.
+RUN conda init bash
 RUN conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main
 RUN conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
 
